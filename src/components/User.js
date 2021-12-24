@@ -1,13 +1,13 @@
-function User(props) {
-    return (
-        <>
-        <h1>
-            {
-            props.loggedIn ? `My name is ${props.name}, my surname is ${props.surname}` : "Login please" 
-            } 
-        </h1>
-        </>
-    );
+function User({ name, surname, loggedIn, age, friends }) {
+  return (
+    <>
+      <h1>{loggedIn ? `${name} ${surname} (${age})` : "Login please"}</h1>
+
+      {friends.map((friend) => (
+        <div key={friend.id}>{friend.name}</div>
+      ))}
+    </>
+  );
 }
 
 export default User;

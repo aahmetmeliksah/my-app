@@ -4,6 +4,10 @@ import User from "./components/User";
 
 const friends = [
   {
+    id: 0,
+    name: "Alperen",
+  },
+  {
     id: 1,
     name: "Micheal",
   },
